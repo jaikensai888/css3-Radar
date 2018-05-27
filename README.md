@@ -2,7 +2,7 @@
 
 ## 效果展示
 
- ![image](https://github.com/jaikensai888/css3-Radar/image/raderlive.gif)
+![image](https://raw.githubusercontent.com/jaikensai888/css3-Radar/master/image/radarLive.gif)
 
 ## 介绍
 
@@ -14,9 +14,9 @@
 
 > background 下可以使用多个渐变，使用,隔开
 
-- Linear-Gradients(线性渐变)
+* Linear-Gradients(线性渐变)
 
->该实例使用在（扫描器）
+> 该实例使用在（扫描器）
 
 ```用法总结
 Linear-Gradients(agree,firstColor,secondColor，...moreColor)
@@ -26,28 +26,25 @@ Linear-Gradients（45deg，rgba（红色，绿色，蓝色，透明率）20%，r
 - 最后百分号为从上到下，纯色的开始的位置；
 
 - 还有一组repeat的用法就是重复使用
-
 ```
 
-- Radial-Gradient（径向渐变）
+* Radial-Gradient（径向渐变）
 
->该实例使用在画雷达图
+> 该实例使用在画雷达图
 
 ```用法总结
-
 background: radial-gradient(center, shape size, start-color, ..., last-color);
 
 center 中心点
 shape 形状，circle，ellipse
 size：形状，系统有固定；
-
 ```
 
-### Animation动画
+### Animation 动画
 
 > 该实例使用在（扫描旋转，目标点消失动画）
 
-- @keyFrames 声明动画
+* @keyFrames 声明动画
 
 ```用法总结
 1.开始结束
@@ -62,10 +59,9 @@ cssStyle
 }
 20%{
 }
-
 ```
 
-- 引用
+* 引用
 
 ```用法总结
 在css中直接使用Animation:动画名称，持续时间，是否无线循环；
@@ -76,7 +72,7 @@ cssStyle
 
 > 该实例使用在扫描图层旋转
 
-- 引用
+* 引用
 
 ```旋转用法总结
 1.在css中直接使用
