@@ -4,10 +4,16 @@ html {
     width: 100%;
 }
 
+.content {
+    background: black;
+    width: 75vh;
+    height: 75vh;
+}
+
 .radar {
     background: -webkit-radial-gradient(center, rgba(32, 255, 77, 0.3) 0%, rgba(32, 255, 77, 0) 75%), -webkit-repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #20ff4d 18.6%, rgba(32, 255, 77, 0) 18.9%), -webkit-linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%), -webkit-linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%);
-    width: 75vw;
-    height: 75vw;
+    width: 75vh;
+    height: 75vh;
     max-height: 75vh;
     max-width: 75vh;
     border-radius: 50%;
@@ -29,11 +35,13 @@ html {
     display: block;
     position: absolute;
     background: #00ff33;
-    width: 2vw;
-    height: 2vw;
+    width: 1vw;
+    height: 1vw;
     border-radius: 50%;
-    left: 37.5vw;
-    top: 37.5vw;
+    left: 37.5vh;
+    top: 37.5vh;
+    animation: target-shine 3s infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes radar-beam {
@@ -42,5 +50,23 @@ html {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes target-shine {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
     }
 }

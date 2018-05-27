@@ -20,10 +20,39 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <script src="" async defer></script>
+    <script type="text/javascript">
+        function simulatorTargetPos(scopeX, scopeY) {
+            //由于x=y直接用x
+            var posX = posY = getScopeRandom(scopeX[0], scopeX[1]),
+                target = document.getElementById('target');
+            target.style.cssText = "top:" + posY + "px;left:" + posX + "px";
 
-    <div id='radar' class="radar">
-        <div id='target' class="target"></div>
+        }
+
+        function getScopeRandom(min, max) {
+            var diff = max - min,
+                random = min + Math.round(Math.random() * diff);
+            return random;
+
+        }
+        window.onload = function () {
+            var radar = document.getElementById('radar'),
+                radarRadius = radar.clientWidth / 2,
+                //45度角 y=x
+                //勾股定律 x^2+y^2=radarRadius^2
+                radarLength = Math.sqrt(radarRadius * radarRadius / 2),
+                targetScopeX = [radarRadius - radarLength, radarRadius * 2 - (radarRadius - radarLength)],
+                targetScopeY = [radarRadius - radarLength, radarRadius * 2 - (radarRadius - radarLength)];
+            setInterval(function () {
+                simulatorTargetPos(targetScopeX, targetScopeY);
+            }, 3000)
+
+        }
+    </script>
+    <div class='content'>
+        <div id='radar' class="radar">
+            <div id='target' class="target"></div>
+        </div>
     </div>
 </body>
 
