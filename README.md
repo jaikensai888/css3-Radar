@@ -1,8 +1,12 @@
 # css3-Radar（css3 雷达效果）
 
+## 效果展示
+
+ ![image](https://github.com/jaikensai888/css3-Radar/image/raderlive.gif)
+
 ## 介绍
 
-    简单的雷达图扫描图形，模拟了目标点，目标掉点的运行轨迹在y=x的直线上随机运动；
+    简单的雷达图扫描图形，模拟了目标点，目标掉点的运行轨迹在y=x的直线上随机运动；
 
 ## 主要技术总结
 
